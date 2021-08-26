@@ -8,7 +8,7 @@
         android:id="@+id/dashboardFragment"
         android:icon="@drawable/ic_baseline_dashboard_24"
         android:title="Dashboard" />
-    <item android:id="@+id/recordFragment"
+    <item android:id="@+id/runFragment"
         android:icon="@drawable/ic_baseline_directions_run_24"
         android:title="Record"/>
     <item android:id="@+id/profileFragment"

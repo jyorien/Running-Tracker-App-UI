@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".RunFragment">
+
+
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/map_view"
+            android:name="com.google.android.gms.maps.SupportMapFragment"/>
+
+        <LinearLayout
+            android:background="@drawable/white_backdrop"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="1dp"
+            android:orientation="vertical"
+            android:layout_gravity="bottom">
+            <Chronometer
+                android:layout_width="match_parent"
+                android:layout_marginVertical="10dp"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="30sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:textAlignment="center"
+                android:layout_marginVertical="10dp"
+                android:text="0 km"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginVertical="10dp"
+                android:text="start"/>
+        </LinearLayout>
+    </FrameLayout>
+</layout>

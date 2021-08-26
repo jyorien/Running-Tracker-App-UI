@@ -10,187 +10,193 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginBottom="?attr/actionBarSize"
         tools:context=".HomeFragment">
-
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:orientation="vertical"
             android:layout_height="match_parent">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="38dp"
-                android:layout_marginTop="25dp"
-                android:text="Good morning,\n Joey!"
-                android:textColor="@color/black"
-                android:textSize="31sp"
-                android:textStyle="bold" />
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/image_list"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="22dp"
-                android:orientation="horizontal"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="37dp"
-                android:paddingStart="38dp"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:text="Today's Statistics"/>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="300dp"
-                android:layout_gravity="center"
-                android:background="@drawable/rounded_borders"
-                android:layout_marginVertical="10dp"
-                android:layout_height="100dp">
-                <ImageView
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:layout_marginStart="10dp"
-                    android:background="@drawable/rounded_borders"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    android:src="@drawable/ic_baseline_directions_walk_24"/>
+                android:orientation="vertical"
+                android:layout_height="match_parent">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Steps"
-                    android:textSize="20sp"
-                    android:id="@+id/steps"
+                    android:layout_marginStart="38dp"
+                    android:layout_marginTop="25dp"
+                    android:text="Good morning,\n Joey!"
+                    android:textColor="@color/black"
+                    android:textSize="31sp"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/image_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="22dp"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="37dp"
+                    android:paddingStart="38dp"
+                    android:textSize="24sp"
                     android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:layout_marginTop="20sp"
-                    android:layout_marginStart="90dp"/>
+                    android:textColor="@color/black"
+                    android:text="Today's Statistics"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Target: 10000"
-                    android:textSize="16sp"
-                    android:layout_marginStart="90dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/steps"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="5948"
-                    android:textSize="28sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    android:textColor="@color/purple_700"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    android:layout_marginEnd="10dp"/>
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="300dp"
-                android:layout_gravity="center"
-                android:layout_marginVertical="10dp"
-                android:background="@drawable/rounded_borders"
-                android:layout_height="100dp">
-                <ImageView
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:layout_marginStart="10dp"
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="300dp"
+                    android:layout_gravity="center"
                     android:background="@drawable/rounded_borders"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    android:src="@drawable/ic_baseline_directions_run_24"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Distance"
-                    android:textSize="20sp"
-                    android:id="@+id/distance"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:layout_marginTop="20sp"
-                    android:layout_marginStart="90dp"/>
+                    android:layout_marginVertical="10dp"
+                    android:layout_height="100dp">
+                    <ImageView
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/rounded_borders"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:src="@drawable/ic_baseline_directions_walk_24"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Steps"
+                        android:textSize="20sp"
+                        android:id="@+id/steps"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginTop="20sp"
+                        android:layout_marginStart="90dp"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Target: 3 km"
-                    android:textSize="16sp"
-                    android:layout_marginStart="90dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/distance"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Target: 10000"
+                        android:textSize="16sp"
+                        android:layout_marginStart="90dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/steps"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="2.00"
-                    android:textColor="@color/purple_700"
-                    android:textSize="28sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    android:layout_marginEnd="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5948"
+                        android:textSize="28sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:textColor="@color/purple_700"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginEnd="10dp"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="300dp"
-                android:layout_marginVertical="10dp"
-                android:layout_gravity="center"
-                android:background="@drawable/rounded_borders"
-                android:layout_height="100dp">
-                <ImageView
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:layout_marginStart="10dp"
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="300dp"
+                    android:layout_gravity="center"
+                    android:layout_marginVertical="10dp"
                     android:background="@drawable/rounded_borders"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    android:src="@drawable/ic_baseline_add_reaction_24"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Water"
-                    android:textSize="20sp"
-                    android:id="@+id/water"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:layout_marginTop="20sp"
-                    android:layout_marginStart="90dp"/>
+                    android:layout_height="100dp">
+                    <ImageView
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/rounded_borders"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:src="@drawable/ic_baseline_directions_run_24"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Distance"
+                        android:textSize="20sp"
+                        android:id="@+id/distance"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginTop="20sp"
+                        android:layout_marginStart="90dp"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Target: 5L"
-                    android:textSize="16sp"
-                    android:layout_marginStart="90dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/water"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Target: 3 km"
+                        android:textSize="16sp"
+                        android:layout_marginStart="90dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/distance"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="2.50"
-                    android:textSize="28sp"
-                    android:textColor="@color/purple_700"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    android:layout_marginEnd="10dp"/>
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2.00"
+                        android:textColor="@color/purple_700"
+                        android:textSize="28sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginEnd="10dp"/>
 
-        </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="300dp"
+                    android:layout_marginVertical="10dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/rounded_borders"
+                    android:layout_height="100dp">
+                    <ImageView
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/rounded_borders"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:src="@drawable/ic_baseline_add_reaction_24"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Water"
+                        android:textSize="20sp"
+                        android:id="@+id/water"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginTop="20sp"
+                        android:layout_marginStart="90dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Target: 5L"
+                        android:textSize="16sp"
+                        android:layout_marginStart="90dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/water"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2.50"
+                        android:textSize="28sp"
+                        android:textColor="@color/purple_700"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginEnd="10dp"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+
 
 
 

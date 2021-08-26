@@ -30,7 +30,6 @@ class ImageVH(itemView: View) : RecyclerView.ViewHolder(itemView) {
             BuildConfig.APPLICATION_ID
         )
         image.setImageResource(identifier)
-        image.setBackgroundResource(R.drawable.rounded_borders)
     }
 
 }

@@ -20,4 +20,13 @@
         android:name="com.example.appclone1.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/runFragment"
+        android:name="com.example.appclone1.RunFragment"
+        android:label="fragment_run"
+        tools:layout="@layout/fragment_run" >
+        <action
+            android:id="@+id/action_runFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
 </navigation>
